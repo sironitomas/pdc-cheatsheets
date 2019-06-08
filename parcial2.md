@@ -1,5 +1,4 @@
 # JAVA
-
 ## Arrays
 ```java
 public ArrayList(int initialCapacity)
@@ -9,7 +8,6 @@ Constructs an empty list with the specified initial capacity. Example:
 test = new ArrayList<String>();
 test.add(object);
 ```
-
 Ejemplo de uso de ArrayList y sessions:
 ```java
 List<String> items = (List<String>) session.getAttribute("myToDoList");
@@ -24,7 +22,6 @@ if (theItem != null) {
     items.add(theItem);
 }
 ```
-
 ## Servlets
 - Crear un nuevo servlet con Eclipse
 - Dentro del método doPost o doGet, agregar:
@@ -35,7 +32,6 @@ PrintWriter out = response.getWriter();
 // Luego usar el objeto out para escribir la respuesta.
 out.println("<h1>Titulo</h1>");
 ```
-
 ## Cookies
 En el siguiente ejemplo se muestra...
 ```java
@@ -51,7 +47,7 @@ else {
     cookie = new Cookie(request.getParameter("cookieName"),
                         request.getParameter("cookieValue")
                        );
-    
+
     cookie.setMaxAge(24 * 60 * 60);  // 24 horas
 }
 
@@ -61,25 +57,14 @@ response.sendRedirect("./index.jsp");
 }
 
 ```
-
-## doGet de ejemplo
-```java
-response.setContentType("text/html");
-PrintWriter out = response.getWriter();
-
-out.println("<html><body>");
-out.println("<h2>Hello World</h2>");
-out.println("</html></body>");
-```
-
-## JDBC 
+## JDBC
 ```java
 Connection conn = null;
 PreparedStatement stmt = null;
 
 try {
     Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-	
+
     conn = DriverManager.getConnection("jdbc:sqlserver://localhost;databaseName=pdc",
                                         "sa", "yourStrong(!)Password");
     conn.setAutoCommit(true);
@@ -121,9 +106,7 @@ $('#login_form').on('submit', function(e) { //use on if jQuery 1.7+
 <script type="text/javascript" src=js/jquery-3.4.1.min.js></script>
 <script type="text/javascript" src=js/main.js></script>
 ```
-
 # JQuery
-
 ## Document ready con ejemplo AJAX
 ```javascript
 $(document).ready(function() {
@@ -167,9 +150,8 @@ $("input[name=knowschassis]").change(function() {});
 
 ## Evento `keyup` para text inputs
 ```javascript
-$("#reclamo").on("keyup", function() {}); 
+$("#reclamo").on("keyup", function() {});
 ```
-
 ## Get checked radio value
 ```html
 <input type="radio" name="knowschassis" value="si">
@@ -177,16 +159,11 @@ $("#reclamo").on("keyup", function() {});
 <input type="radio" name="knowschassis" value="no">
 <label for="no"> No</label>
 ```
-
 ```javascript
 $("input[name="knowschassis"]:checked").val()
 ```
-
 Disable input
-
 `$("#chassisNumber").prop("disabled", true);`
-
 # CSS
-
 ## Boostrap
 
